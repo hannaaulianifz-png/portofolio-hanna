@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanna Auliani Fauziah - Portofolio Profesional Akuntansi & Audit</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF9F5',     /* Off-white / Cream Pastel */
+                            card: '#FFFFFF',   /* Pure White */
+                            dark: '#2E2A25',   /* Muted Charcoal Text */
+                            primary: '#8E9A86',/* Elegant Muted Sage Green */
+                            secondary: '#D4C3A3', /* Warm Pastel Gold/Beige */
+                            accent: '#F3EFE0', /* Light Cream Accent */
+                            success: '#7D8C73'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FAF9F5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4C3A3;
+            border-radius: 3px;
+        }
+        .active-tab {
+            background-color: #8E9A86 !important;
+            color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans selection:bg-brand-secondary selection:text-brand-dark overflow-x-hidden custom-scrollbar">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-brand-accent transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="group">
+                <span class="font-serif text-2xl font-bold tracking-wide text-brand-dark group-hover:text-brand-primary transition-colors duration-300">Hanna.</span>
+                <span class="text-[10px] uppercase tracking-widest text-brand-primary block -mt-1.5 font-semibold">Audit & Finance Portfolio</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wider uppercase">
+                <a href="#home" class="hover:text-brand-primary transition-colors duration-300">Beranda</a>
+                <a href="#about" class="hover:text-brand-primary transition-colors duration-300">Tentang</a>
+                <a href="#experience" class="hover:text-brand-primary transition-colors duration-300">Pengalaman</a>
+                <a href="#skills" class="hover:text-brand-primary transition-colors duration-300">Keahlian</a>
+                <a href="#cv-vault" class="hover:text-brand-primary transition-colors duration-300">Berkas CV</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors duration-300">Kontak</a>
+                <a href="https://portofol.io/hannaaulianifz-zbaq" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-brand-primary/80 transition-colors duration-300 flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Portofolio Online
+                </a>
+                <a href="#cv-vault" class="px-4 py-2.5 bg-brand-primary text-white rounded-lg shadow-sm hover:bg-brand-primary/90 hover:shadow-md transition-all duration-300">
+                    <i class="fa-solid fa-file-invoice mr-1.5"></i> Lihat Dokumen
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-brand-dark focus:outline-none p-2" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="md:hidden hidden bg-brand-bg border-b border-brand-accent transition-all duration-300" id="mobile-menu">
+            <div class="px-6 py-4 flex flex-col space-y-4 text-xs font-semibold tracking-wider uppercase">
+                <a href="#home" class="mobile-nav-link hover:text-brand-primary py-1">Beranda</a>
+                <a href="#about" class="mobile-nav-link hover:text-brand-primary py-1">Tentang</a>
+                <a href="#experience" class="mobile-nav-link hover:text-brand-primary py-1">Pengalaman</a>
+                <a href="#skills" class="mobile-nav-link hover:text-brand-primary py-1">Keahlian</a>
+                <a href="#cv-vault" class="mobile-nav-link hover:text-brand-primary py-1">Berkas CV</a>
+                <a href="#contact" class="mobile-nav-link hover:text-brand-primary py-1">Kontak</a>
+                <a href="https://portofol.io/hannaaulianifz-zbaq" target="_blank" rel="noopener noreferrer" class="mobile-nav-link text-brand-primary py-1 flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Portofolio Online (Link)
+                </a>
+                <a href="#cv-vault" class="mobile-nav-link flex items-center justify-center bg-brand-accent text-brand-dark py-2.5 rounded-lg hover:bg-brand-secondary transition-colors text-center">
+                    <i class="fa-solid fa-file-pdf mr-2 text-brand-primary"></i> Ambil Dokumen CV
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="min-h-screen pt-28 flex items-center relative overflow-hidden">
+        <!-- Abstract Aesthetic Background Elements -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-accent/40 blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-[#E8EEDF]/40 blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-12">
+            <!-- Left Grid: Main Copy and Action Statement -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-brand-accent/80 px-4 py-2 rounded-full text-brand-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-primary animate-pulse"></span>
+                    <span>Ready for Nationwide Business Travel</span>
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-dark leading-tight">
+                    Hanna Auliani <br><span class="text-brand-primary">Fauziah</span>
+                </h1>
+                
+                <h2 class="text-lg sm:text-xl text-brand-dark/80 font-serif italic tracking-wide">
+                    S1 Akuntansi Lulusan Terbaik & Mantan Junior Auditor
+                </h2>
+                
+                <p class="text-brand-dark/70 text-sm sm:text-base leading-relaxed max-w-xl">
+                    "Menghadirkan objektivitas tinggi, akurasi analitis, dan mitigasi risiko keuangan secara independen. Berkomitmen mengawal kepatuhan regulasi serta transparansi laporan keuangan demi pertumbuhan berkelanjutan organisasi Anda."
+                </p>
+                
+                <!-- Core Attribute Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 bg-brand-accent text-brand-dark/80 text-xs font-semibold rounded-lg border border-brand-secondary/20">
+                        <i class="fa-solid fa-scale-balanced text-brand-primary mr-1"></i> Berpikir Objektif & Independen
+                    </span>
+                    <span class="px-3 py-1 bg-brand-accent text-brand-dark/80 text-xs font-semibold rounded-lg border border-brand-secondary/20">
+                        <i class="fa-solid fa-plane text-brand-primary mr-1"></i> Mobilisasi Seluruh Indonesia
+                    </span>
+                    <span class="px-3 py-1 bg-brand-accent text-brand-dark/80 text-xs font-semibold rounded-lg border border-brand-secondary/20">
+                        <i class="fa-solid fa-bullseye text-brand-primary mr-1"></i> Berorientasi pada Target
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#experience" class="px-6 py-3 bg-brand-primary text-white text-xs font-bold uppercase tracking-wider rounded-lg hover:bg-brand-primary/90 shadow-sm hover:shadow-md transition-all duration-300">
+                        Tinjau Rekam Jejak
+                    </a>
+                    <a href="https://portofol.io/hannaaulianifz-zbaq" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-transparent text-brand-primary hover:text-white hover:bg-brand-primary border border-brand-primary text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Portofolio Online
+                    </a>
+                </div>
+
+                <!-- CV Quick Metrics Grid -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-accent max-w-md">
+                    <div>
+                        <span class="block text-2xl font-serif font-bold text-brand-primary">3.79</span>
+                        <span class="text-[10px] uppercase font-bold text-brand-dark/50">IPK S1 Akuntansi</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-serif font-bold text-brand-primary">CAP</span>
+                        <span class="text-[10px] uppercase font-bold text-brand-dark/50">Cert. Acc. Prof.</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-serif font-bold text-brand-primary">A & B</span>
+                        <span class="text-[10px] uppercase font-bold text-brand-dark/50">Brevet Pajak</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Grid: Elegant Audit Dashboard Representing Technical Competencies -->
+            <div class="lg:col-span-5 flex justify-center items-center">
+                <div class="relative w-full max-w-sm">
+                    <!-- Elegant Background Frame -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent to-brand-bg rounded-2xl rotate-3 border border-brand-secondary/30 -z-10 shadow-lg"></div>
+                    
+                    <div class="bg-brand-card rounded-2xl shadow-xl flex flex-col justify-between p-6 border border-brand-accent">
+                        <!-- Top visual audit metrics representation -->
+                        <div class="flex items-center justify-between border-b border-brand-accent pb-4">
+                            <div>
+                                <h3 class="text-xs uppercase tracking-wider text-brand-primary font-bold">Kertas Kerja & Audit</h3>
+                                <p class="text-[10px] text-brand-dark/50">Objektivitas & Kepatuhan Tinggi</p>
+                            </div>
+                            <div class="p-2.5 bg-brand-accent rounded-lg text-brand-primary">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                        </div>
+
+                        <!-- Graphic Bars Illustrating Financial Rigor & Control Points -->
+                        <div class="space-y-4 py-4">
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-xs font-semibold">
+                                    <span>Kontrol Proyek Operasional (LPPM)</span>
+                                    <span>30 Proyek</span>
+                                </div>
+                                <div class="w-full bg-brand-accent rounded-full h-2">
+                                    <div class="bg-brand-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-xs font-semibold">
+                                    <span>Efisiensi Anggaran (KSPM)</span>
+                                    <span class="text-brand-primary">Sukses Hemat 30%</span>
+                                </div>
+                                <div class="w-full bg-brand-accent rounded-full h-2">
+                                    <div class="bg-brand-primary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-xs font-semibold">
+                                    <span>Kertas Kerja Digital (ATLAS)</span>
+                                    <span>100% Sesuai Standar</span>
+                                </div>
+                                <div class="w-full bg-brand-accent rounded-full h-2">
+                                    <div class="bg-brand-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Information Bar -->
+                        <div class="bg-brand-accent/50 p-3.5 rounded-xl text-[11px] text-brand-dark/80 flex items-center justify-between">
+                            <span><i class="fa-solid fa-circle-check text-brand-primary mr-1.5"></i> Rekonsiliasi & Analisis Varian</span>
+                            <span class="font-bold">Kudus, Jateng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-24 bg-brand-card">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest font-bold text-brand-primary">Profil Profesional</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark mt-2">Tentang Saya</h2>
+                <div class="w-16 h-1 bg-brand-primary mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <!-- Left Grid: Detailed Bio based on updated CV -->
+                <div class="md:col-span-7 space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark">
+                        Mengawal Akurasi Keuangan dengan Sikap Objektif dan Disiplin Analitis
+                    </h3>
+                    <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed">
+                        Halo! Saya **Hanna Auliani Fauziah**, seorang lulusan baru (Fresh Graduate) dari program studi **S1 Akuntansi Universitas Negeri Malang** dengan predikat kelulusan sangat memuaskan (IPK 3.79). 
+                    </p>
+                    <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed">
+                        Sebagai profesional yang objektif, saya memiliki pengalaman praktis di bidang audit melalui posisi **Junior Auditor (Magang)** di Kantor Akuntan Publik (KAP). Saya terlibat langsung dalam penyusunan komponen Laporan Auditor Independen serta pendokumentasian kertas kerja digital berbasis sistem **ATLAS**.
+                    </p>
+                    <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed">
+                        Saya dibekali keterampilan yang kuat dalam kontrol kepatuhan operasional, verifikasi bukti transaksi secara presisi, analisis varian anggaran, hingga pelaporan pajak. Dengan komunikasi yang adaptif untuk koordinasi lintas fungsi serta **kesiapan penuh untuk ditugaskan melakukan perjalanan dinas ke seluruh penjuru Indonesia**, saya siap menjadi aset tepercaya di organisasi Anda.
+                    </p>
+                    
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="p-2.5 bg-brand-accent rounded-lg text-brand-primary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-brand-dark/50 uppercase">Asal / Domisili</h4>
+                                <p class="text-sm font-semibold">Kudus, Jawa Tengah</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="p-2.5 bg-brand-accent rounded-lg text-brand-primary">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-brand-dark/50 uppercase">Email</h4>
+                                <p class="text-sm font-semibold">hanna.auliani.fa@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="p-2.5 bg-brand-accent rounded-lg text-brand-primary">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-brand-dark/50 uppercase">Telepon</h4>
+                                <p class="text-sm font-semibold">089618311599</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="p-2.5 bg-brand-accent rounded-lg text-brand-primary">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-brand-dark/50 uppercase">LinkedIn</h4>
+                                <p class="text-sm font-semibold hover:text-brand-primary transition-colors"><a href="https://www.linkedin.com/in/fauziahanna" target="_blank" rel="noopener noreferrer">fauziahanna</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Grid: Education Card & Strategic Highlights -->
+                <div class="md:col-span-5 space-y-6">
+                    <!-- Academic Card -->
+                    <div class="bg-brand-bg rounded-xl p-6 border border-brand-accent shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-brand-secondary/20 rounded-full blur-xl"></div>
+                        
+                        <div class="flex items-center space-x-2 text-brand-primary mb-4">
+                            <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-wider">Pendidikan Akademis</span>
+                        </div>
+                        
+                        <h4 class="font-serif text-lg font-bold text-brand-dark">Universitas Negeri Malang</h4>
+                        <p class="text-xs text-brand-dark/60 font-medium">Malang, Jawa Timur</p>
+                        
+                        <div class="mt-4 pt-4 border-t border-brand-accent space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-brand-dark/70">Program Studi:</span>
+                                <span class="font-semibold text-brand-dark">S1 Akuntansi</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-brand-dark/70">Pencapaian IPK:</span>
+                                <span class="font-bold text-brand-primary">3.79 / 4.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-brand-dark/70">Periode Studi:</span>
+                                <span class="font-semibold text-brand-dark">Agustus 2022 - Juni 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Philosophy Quote -->
+                    <div class="border-l-4 border-brand-primary pl-4 py-2 italic text-brand-dark/70 text-sm leading-relaxed">
+                        "Integritas dalam pelaporan keuangan bukan sekadar membandingkan saldo debet dan kredit, melainkan komitmen tanpa syarat dalam menemukan kebenaran operasional secara objektif."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS SECTION -->
+    <section id="experience" class="py-24 bg-brand-bg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-xs uppercase tracking-widest font-bold text-brand-primary">Rekam Jejak Karir</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark mt-2">Pengalaman Praktis</h2>
+                <div class="w-16 h-1 bg-brand-primary mx-auto mt-4"></div>
+                <p class="text-brand-dark/60 text-sm mt-4">Kontribusi nyata dalam dunia kerja korporasi, kantor akuntan publik, serta kepemimpinan anggaran organisasi.</p>
+            </div>
+
+            <!-- Dynamic Interactive Filters -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterExperience('all')" id="tab-all" class="filter-tab px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-brand-accent text-brand-dark hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm active-tab">
+                    Semua
+                </button>
+                <button onclick="filterExperience('professional')" id="tab-professional" class="filter-tab px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-brand-accent text-brand-dark hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm">
+                    Magang & Kerja
+                </button>
+                <button onclick="filterExperience('organization')" id="tab-organization" class="filter-tab px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-brand-accent text-brand-dark hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm">
+                    Organisasi
+                </button>
+                <button onclick="filterExperience('volunteer')" id="tab-volunteer" class="filter-tab px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-brand-accent text-brand-dark hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm">
+                    Kegiatan Relawan
+                </button>
+            </div>
+
+            <!-- Experience Grid Cards (Derived accurately from updated CV) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="experience-container">
+                
+                <!-- CARD 1: LPPM UM (Staf Administrasi Keuangan Proyek) -->
+                <div class="exp-card professional bg-brand-card rounded-xl p-6 border border-brand-accent shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between" data-category="professional">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 bg-[#E8EEDF] text-brand-primary text-[10px] font-bold rounded-md uppercase">Magang & Kerja</span>
+                            <span class="text-xs text-brand-dark/50 font-semibold"><i class="fa-regular fa-calendar-alt mr-1"></i> Jan 2024 - Sekarang</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-brand-dark">Staf Administrasi Keuangan Proyek</h3>
+                        <p class="text-sm text-brand-primary font-medium mt-1">LPPM Universitas Negeri Malang</p>
+                        
+                        <ul class="mt-4 space-y-2.5 text-xs text-brand-dark/70 list-disc list-outside pl-4">
+                            <li>Melakukan kontrol dan evaluasi objektif terhadap pelaksanaan sistem, regulasi, dan prosedur penggunaan dana untuk <strong>30 judul proyek operasional</strong> secara paralel.</li>
+                            <li>Memeriksa kelengkapan bukti transaksi, validitas nota pengeluaran, serta kepatuhan kewajiban perpajakan guna penyusunan <strong>Surat Pertanggungjawaban (SPJ)</strong> akhir penyerapan dana kegiatan.</li>
+                            <li>Melakukan analisa varian biaya antara perencanaan anggaran (RAB) dengan realisasi aktual, serta memecahkan kendala administratif yang ditemukan di lapangan.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-accent flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary"><i class="fa-solid fa-chart-pie mr-1"></i> Analisis Varian Anggaran</span>
+                        <span class="text-[10px] text-brand-dark/40 font-medium">Malang, Jatim</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2: KAP Mahsun Nurdiono Kukuh (Junior Auditor) -->
+                <div class="exp-card professional bg-brand-card rounded-xl p-6 border border-brand-accent shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between" data-category="professional">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 bg-[#E8EEDF] text-brand-primary text-[10px] font-bold rounded-md uppercase">Magang & Kerja</span>
+                            <span class="text-xs text-brand-dark/50 font-semibold"><i class="fa-regular fa-calendar-alt mr-1"></i> Jul 2024 - Nov 2024</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-brand-dark">Junior Auditor</h3>
+                        <p class="text-sm text-brand-primary font-medium mt-1">KAP Mahsun Nurdiono Kukuh & Rekan</p>
+                        
+                        <ul class="mt-4 space-y-2.5 text-xs text-brand-dark/70 list-disc list-outside pl-4">
+                            <li>Melakukan verifikasi transaksi, pengecekan saldo, dan rekonsiliasi berkala antara catatan buku kas internal (<em>petty cash</em>) dengan rekening koran bank menggunakan software <strong>GNU Cash</strong> guna meminimalkan ketidaksesuaian data.</li>
+                            <li>Membantu mendokumentasikan kertas kerja audit proyek secara sistematis berbasis sistem digital <strong>ATLAS</strong>.</li>
+                            <li>Terlibat dalam penyusunan Laporan Audit Independen dari Laporan Posisi Keuangan hingga Catatan atas Laporan Keuangan (CALK).</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-accent flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary"><i class="fa-solid fa-microchip mr-1"></i> Audit & Rekonsiliasi</span>
+                        <span class="text-[10px] text-brand-dark/40 font-medium">Malang, Jatim</span>
+                    </div>
+                </div>
+
+                <!-- CARD 3: KSPM (Bendahara Umum) -->
+                <div class="exp-card organization bg-brand-card rounded-xl p-6 border border-brand-accent shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between" data-category="organization">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 bg-[#FAF2EB] text-[#DE9B72] text-[10px] font-bold rounded-md uppercase">Organisasi</span>
+                            <span class="text-xs text-brand-dark/50 font-semibold"><i class="fa-regular fa-calendar-alt mr-1"></i> Mar 2023 - Des 2024</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-brand-dark">Bendahara Umum</h3>
+                        <p class="text-sm text-brand-primary font-medium mt-1">Kelompok Studi Pasar Modal</p>
+                        
+                        <ul class="mt-4 space-y-2.5 text-xs text-brand-dark/70 list-disc list-outside pl-4">
+                            <li>Mengendalikan sirkulasi keuangan dan melakukan kontrol ketat terhadap kepatuhan anggaran di seluruh fungsi divisi organisasi.</li>
+                            <li>Menyusun laporan keuangan periodik dan mengevaluasi Surat Pertanggungjawaban (SPJ) internal guna menjamin transparansi serta akuntabilitas penyerapan anggaran organisasi.</li>
+                            <li>Merumuskan strategi mitigasi risiko keuangan yang sukses <strong>mengoptimalkan efisiensi biaya hingga 30%</strong> dari periode sebelumnya.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-accent flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary"><i class="fa-solid fa-calculator mr-1"></i> Mitigasi Risiko</span>
+                        <span class="text-[10px] text-brand-dark/40 font-medium">Malang, Jatim</span>
+                    </div>
+                </div>
+
+                <!-- CARD 4: PMII (Sekretaris Umum) -->
+                <div class="exp-card organization bg-brand-card rounded-xl p-6 border border-brand-accent shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between" data-category="organization">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 bg-[#FAF2EB] text-[#DE9B72] text-[10px] font-bold rounded-md uppercase">Organisasi</span>
+                            <span class="text-xs text-brand-dark/50 font-semibold"><i class="fa-regular fa-calendar-alt mr-1"></i> Jun 2023 - Jun 2025</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-brand-dark">Sekretaris Umum</h3>
+                        <p class="text-sm text-brand-primary font-medium mt-1">Pergerakan Mahasiswa Islam Indonesia</p>
+                        
+                        <ul class="mt-4 space-y-2.5 text-xs text-brand-dark/70 list-disc list-outside pl-4">
+                            <li>Bertanggung jawab penuh atas manajemen tata kelola administrasi organisasi secara tertib dan transparan.</li>
+                            <li>Menyusun kalender program kerja tahunan serta berkoordinasi secara aktif dengan ketua dan kepala divisi untuk sinergi tim.</li>
+                            <li>Menyusun dan mengevaluasi Laporan Pertanggungjawaban administratif berkala serta laporan akhir tahun organisasi.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-accent flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary"><i class="fa-solid fa-envelope-open-text mr-1"></i> Administrasi & LPJ</span>
+                        <span class="text-[10px] text-brand-dark/40 font-medium">Malang, Jatim</span>
+                    </div>
+                </div>
+
+                <!-- CARD 5: Tax Lovers Community (Relawan Pajak) -->
+                <div class="exp-card volunteer bg-brand-card rounded-xl p-6 border border-brand-accent shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between" data-category="volunteer">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 bg-[#F5EEF0] text-[#A66E80] text-[10px] font-bold rounded-md uppercase">Kegiatan Relawan</span>
+                            <span class="text-xs text-brand-dark/50 font-semibold"><i class="fa-regular fa-calendar-alt mr-1"></i> Jan 2023 - Mar 2023</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-brand-dark">Relawan Pajak</h3>
+                        <p class="text-sm text-brand-primary font-medium mt-1">Tax Lovers Community</p>
+                        
+                        <ul class="mt-4 space-y-2.5 text-xs text-brand-dark/70 list-disc list-outside pl-4">
+                            <li>Memberikan asistensi dan penanganan langsung dalam pelaporan SPT Tahunan bagi Wajib Pajak Orang Pribadi dan civitas akademika Universitas Negeri Malang.</li>
+                            <li>Membantu memecahkan kendala administratif perpajakan Wajib Pajak melalui edukasi regulasi yang jelas, solutif, dan tepat.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-accent flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary"><i class="fa-solid fa-money-bill-transfer mr-1"></i> SPT Orang Pribadi</span>
+                        <span class="text-[10px] text-brand-dark/40 font-medium">Malang, Jatim</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MY SKILLS & CERTIFICATIONS SECTION -->
+    <section id="skills" class="py-24 bg-brand-card">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest font-bold text-brand-primary">Kredibilitas Profesional</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark mt-2">Sertifikasi & Keahlian</h2>
+                <div class="w-16 h-1 bg-brand-primary mx-auto mt-4"></div>
+                <p class="text-brand-dark/60 text-sm mt-4">Didukung oleh sertifikasi kredibel nasional, penguasaan perangkat lunak audit, serta analisis finansial taktis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left Grid: Certified Achievements -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="font-serif text-xl font-bold text-brand-dark flex items-center space-x-2">
+                        <span class="p-1.5 bg-brand-accent rounded text-brand-primary text-sm"><i class="fa-solid fa-ribbon"></i></span>
+                        <span>Sertifikasi Profesional</span>
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Cert 1 -->
+                        <div class="bg-brand-bg rounded-xl p-5 border border-brand-accent flex space-x-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 text-brand-primary text-3xl">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-sm font-bold text-brand-dark">Certified Accurate Professional (CAP)</h4>
+                                <p class="text-[11px] text-brand-dark/50 mt-0.5">Diterbitkan oleh Ultima Tekno Solusindo • 2024</p>
+                                <p class="text-xs text-brand-primary mt-2 font-medium">Verifikasi kompetensi nasional dalam pengoperasian software akuntansi akurat berskala menengah-besar.</p>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2 -->
+                        <div class="bg-brand-bg rounded-xl p-5 border border-brand-accent flex space-x-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 text-brand-primary text-3xl">
+                                <i class="fa-solid fa-stamp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-sm font-bold text-brand-dark">Pelatihan Brevet Pajak A & B</h4>
+                                <p class="text-[11px] text-brand-dark/50 mt-0.5">Diselenggarakan oleh KAP Mahsun, Nurdiono, Kukuh & Rekan • 2024</p>
+                                <p class="text-xs text-brand-primary mt-2 font-medium">Kompetensi komprehensif dalam menghitung PPh Orang Pribadi, Badan Usaha, PPN, PPnBM, serta Ketentuan Umum Perpajakan (KUP).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Grid: Skills (Hard, Software, Soft Skills Badges) -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Hard Skills -->
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50 mb-3 flex items-center space-x-2">
+                            <span>Keahlian Teknis (Hard Skills)</span>
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-file-contract text-brand-primary mr-1.5"></i> Penyusunan Laporan Audit Independen
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-puzzle-piece text-brand-primary mr-1.5"></i> Pemecahan Masalah Finansial
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-chart-line text-brand-primary mr-1.5"></i> Analisis Varian Anggaran
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-scale-balanced text-brand-primary mr-1.5"></i> Penyusunan & Evaluasi SPJ
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-receipt text-brand-primary mr-1.5"></i> Perhitungan & Pelaporan Pajak
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Software Skills -->
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50 mb-3 flex items-center space-x-2">
+                            <span>Sistem & Software (Software Skills)</span>
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-computer text-brand-primary mr-1.5"></i> Accurate Accounting Software
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-network-wired text-brand-primary mr-1.5"></i> ATLAS (Audit Digital)
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-file-invoice-dollar text-brand-primary mr-1.5"></i> GNU Cash
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-regular fa-file-excel text-brand-primary mr-1.5"></i> MS Excel (Formula, Pivot Table)
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-regular fa-file-word text-brand-primary mr-1.5"></i> MS Word & PowerPoint
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-widest font-bold text-brand-dark/50 mb-3 flex items-center space-x-2">
+                            <span>Karakter Kerja (Soft Skills)</span>
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-brain text-brand-primary mr-1.5"></i> Berpikir Objektif & Independen
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-users text-brand-primary mr-1.5"></i> Kerja Sama Tim Lintas-Fungsi
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-crosshairs text-brand-primary mr-1.5"></i> Berorientasi pada Target
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-magnifying-glass text-brand-primary mr-1.5"></i> Detail terhadap Angka
+                            </span>
+                            <span class="px-3.5 py-2 bg-brand-bg hover:bg-brand-accent border border-brand-accent rounded-lg text-xs font-semibold text-brand-dark transition-all flex items-center">
+                                <i class="fa-solid fa-business-time text-brand-primary mr-1.5"></i> Manajemen Waktu Ketat
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCUMENT VAULT / CV VERBATIM SECTION -->
+    <section id="cv-vault" class="py-20 bg-brand-bg border-t border-b border-brand-accent relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-accent rounded-full blur-2xl -z-10"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Berkas Kualifikasi Resmi</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mt-2">Dapatkan Salinan Resume Hanna</h3>
+            <p class="text-sm text-brand-dark/70 mt-3 max-w-xl mx-auto leading-relaxed">
+                Tinjau atau unduh berkas CV resmi saya untuk keperluan proses seleksi dan administrasi rekrutmen perusahaan Anda.
+            </p>
+            
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <!-- Card for CV KERJA HANNA.pdf -->
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-accent shadow-sm flex flex-col justify-between text-left">
+                    <div class="flex items-start space-x-3">
+                        <div class="p-3 bg-red-50 text-red-500 rounded-lg text-2xl">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-brand-dark">CV KERJA HANNA.pdf</h4>
+                            <p class="text-[10px] text-brand-dark/50 mt-1">Format Standard Industri</p>
+                            <p class="text-[11px] text-brand-dark/70 mt-2">Berisi detail riwayat pendidikan, magang, organisasi, dan seluruh kredensial akuntansi secara lengkap.</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadVerbatimCV('CV KERJA HANNA.pdf')" class="mt-4 w-full py-2 bg-brand-primary text-white text-xs font-bold uppercase tracking-wider rounded-lg hover:bg-brand-primary/90 transition-all duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-down-to-bracket mr-1.5"></i> Ambil Berkas CV
+                    </button>
+                </div>
+
+                <!-- Card for Apply PT Djarum.pdf -->
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-accent shadow-sm flex flex-col justify-between text-left">
+                    <div class="flex items-start space-x-3">
+                        <div class="p-3 bg-brand-accent text-brand-primary rounded-lg text-2xl">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-brand-dark">Apply PT Djarum.pdf</h4>
+                            <p class="text-[10px] text-brand-dark/50 mt-1">Berkas Khusus Aplikasi</p>
+                            <p class="text-[11px] text-brand-dark/70 mt-2">Resume khusus berorientasi audit, efisiensi operasional, objektivitas, serta kesiapan perjalanan dinas nasional.</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadVerbatimCV('Apply PT Djarum.pdf')" class="mt-4 w-full py-2 bg-brand-dark text-white text-xs font-bold uppercase tracking-wider rounded-lg hover:bg-brand-dark/90 transition-all duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-down-to-bracket mr-1.5"></i> Ambil Lamaran
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-brand-card">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left Grid: Professional Outreach Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs uppercase tracking-widest font-bold text-brand-primary">Hubungi Hanna</span>
+                        <h2 class="font-serif text-3xl font-bold text-brand-dark">Mulai Sinergi Kolaborasi</h2>
+                        <div class="w-12 h-1 bg-brand-primary mt-2"></div>
+                    </div>
+                    
+                    <p class="text-sm sm:text-base text-brand-dark/70 leading-relaxed">
+                        Apakah perusahaan Anda sedang mencari kandidat yang **mandiri, objektif, berorientasi target**, dan siap melakukan perjalan dinas dalam mengawal laporan keuangan serta audit? Saya sangat terbuka untuk peluang wawancara langsung.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <!-- Direct Email -->
+                        <a href="mailto:hanna.auliani.fa@gmail.com" class="flex items-center space-x-4 p-4 rounded-xl bg-brand-bg border border-brand-accent hover:border-brand-primary/40 group transition-all duration-300">
+                            <span class="p-3 bg-brand-card text-brand-primary rounded-lg shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                                <i class="fa-regular fa-envelope text-lg"></i>
+                            </span>
+                            <div>
+                                <span class="block text-[10px] uppercase font-bold text-brand-dark/50">Surat Elektronik Resmi</span>
+                                <span class="text-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors">hanna.auliani.fa@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Direct WhatsApp -->
+                        <a href="tel:089618311599" class="flex items-center space-x-4 p-4 rounded-xl bg-brand-bg border border-brand-accent hover:border-brand-primary/40 group transition-all duration-300">
+                            <span class="p-3 bg-brand-card text-brand-primary rounded-lg shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </span>
+                            <div>
+                                <span class="block text-[10px] uppercase font-bold text-brand-dark/50">Kontak WhatsApp / Telp</span>
+                                <span class="text-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors">089618311599</span>
+                            </div>
+                        </a>
+
+                        <!-- Direct LinkedIn Link -->
+                        <a href="https://www.linkedin.com/in/fauziahanna" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 p-4 rounded-xl bg-brand-bg border border-brand-accent hover:border-brand-primary/40 group transition-all duration-300">
+                            <span class="p-3 bg-brand-card text-brand-primary rounded-lg shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </span>
+                            <div>
+                                <span class="block text-[10px] uppercase font-bold text-brand-dark/50">Tautan LinkedIn Resmi</span>
+                                <span class="text-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors">linkedin.com/in/fauziahanna</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Grid: Contact Message Submission Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-bg rounded-2xl p-6 sm:p-8 border border-brand-accent shadow-sm">
+                        <h3 class="font-serif text-lg font-bold text-brand-dark mb-6">Formulir Undangan Kerja</h3>
+                        
+                        <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-brand-dark/70 uppercase mb-2">Nama Instansi / HRD</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 text-sm bg-brand-card border border-brand-accent rounded-lg focus:outline-none focus:border-brand-primary transition-colors" placeholder="Contoh: Tim Rekrutmen PT Djarum">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-brand-dark/70 uppercase mb-2">Alamat Email Korespondensi</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 text-sm bg-brand-card border border-brand-accent rounded-lg focus:outline-none focus:border-brand-primary transition-colors" placeholder="hrd@perusahaan.com">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold text-brand-dark/70 uppercase mb-2">No. Telepon / Kantor</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 text-sm bg-brand-card border border-brand-accent rounded-lg focus:outline-none focus:border-brand-primary transition-colors" placeholder="021-xxxxxxxx">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-xs font-semibold text-brand-dark/70 uppercase mb-2">Subjek Surat / Pesan</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 text-sm bg-brand-card border border-brand-accent rounded-lg focus:outline-none focus:border-brand-primary transition-colors" placeholder="Undangan Wawancara / Peluang Posisi Internal Audit">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-brand-dark/70 uppercase mb-2">Detail Undangan atau Pesan Kerja</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 text-sm bg-brand-card border border-brand-accent rounded-lg focus:outline-none focus:border-brand-primary transition-colors resize-none" placeholder="Tulis rincian penawaran posisi, domisili kerja, atau tanggal penjadwalan wawancara di sini..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 bg-brand-primary hover:bg-brand-primary/95 text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm hover:shadow-md flex items-center justify-center space-x-2">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>Kirim Surat Resmi</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-bg py-12 border-t border-brand-accent">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="font-serif text-xl font-bold text-brand-dark">Hanna Auliani Fauziah</span>
+                <p class="text-xs text-brand-dark/50 mt-1">© 2026. Hak Cipta Dilindungi. Dikembangkan untuk transparansi & kredibilitas tinggi.</p>
+            </div>
+            
+            <!-- Quick Anchor links -->
+            <div class="flex flex-wrap justify-center gap-6 text-[10px] font-bold uppercase tracking-wider text-brand-dark/60">
+                <a href="#home" class="hover:text-brand-primary transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-brand-primary transition-colors">Tentang</a>
+                <a href="#experience" class="hover:text-brand-primary transition-colors">Pengalaman</a>
+                <a href="#skills" class="hover:text-brand-primary transition-colors">Keahlian</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors">Kontak</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUCCESS TOAST DIALOG (No alerts allowed guardrail) -->
+    <div id="toast-success" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="bg-brand-card border-l-4 border-brand-success p-4 rounded-xl shadow-xl flex items-center space-x-3 max-w-sm border border-brand-accent">
+            <div class="text-brand-success text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-brand-dark">Pesan Berhasil Terkirim!</h4>
+                <p class="text-[10px] text-brand-dark/60">Surat Anda telah disimpan dalam log. Hanna akan segera merespons ke alamat email Anda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLER -->
+    <script>
+        // DOM Elements
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const toastSuccess = document.getElementById('toast-success');
+
+        // Scroll Behavior for Navbar styling
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm', 'bg-brand-bg/95');
+                navbar.classList.remove('bg-brand-bg/80');
+            } else {
+                navbar.classList.remove('shadow-sm', 'bg-brand-bg/95');
+                navbar.classList.add('bg-brand-bg/80');
+            }
+        });
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars-staggered');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars-staggered');
+            }
+        });
+
+        // Close Mobile Menu on Navigating
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars-staggered');
+            });
+        });
+
+        // Interactive Filter for Experiences
+        function filterExperience(category) {
+            // Update active state in buttons
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            const targetTab = document.getElementById(`tab-${category}`);
+            if (targetTab) {
+                targetTab.classList.add('active-tab');
+            }
+
+            // Filter experience cards
+            const cards = document.querySelectorAll('.exp-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                    card.style.opacity = '1';
+                } else if (card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                    card.style.opacity = '1';
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Custom Safe Form Submitting
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Collect Form Values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            console.log("Form successfully completed by client:", { name, email, subject, message });
+
+            // Display beautiful Toast Message instead of alert()
+            toastSuccess.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toastSuccess.classList.add('translate-y-0', 'opacity-100');
+
+            // Reset form
+            document.getElementById('contact-form').reset();
+
+            // Auto-hide toast after 5 seconds
+            setTimeout(() => {
+                toastSuccess.classList.remove('translate-y-0', 'opacity-100');
+                toastSuccess.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 5000);
+        }
+
+        // CV Download Action handler (Simulating real path document trigger)
+        function downloadVerbatimCV(fileName) {
+            console.log(`Menginisiasi protokol pengunduhan berkas: ${fileName}`);
+            
+            // Create temporary toast feedback for downloading simulation
+            const cvToast = document.createElement('div');
+            cvToast.className = "fixed bottom-6 left-6 z-50 bg-brand-card border-l-4 border-brand-primary p-4 rounded-xl shadow-xl flex items-center space-x-3 max-w-sm border border-brand-accent transition-all duration-300";
+            cvToast.innerHTML = `
+                <div class="text-brand-primary text-xl">
+                    <i class="fa-solid fa-spinner animate-spin"></i>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-brand-dark">Mengambil Berkas</h4>
+                    <p class="text-[10px] text-brand-dark/60">Mengunduh "${fileName}" dari repositori aman...</p>
+                </div>
+            `;
+            document.body.appendChild(cvToast);
+            
+            setTimeout(() => {
+                cvToast.innerHTML = `
+                    <div class="text-brand-success text-xl">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-brand-dark">Berhasil Diunduh!</h4>
+                        <p class="text-[10px] text-brand-dark/60">Berkas "${fileName}" siap digunakan.</p>
+                    </div>
+                `;
+                setTimeout(() => {
+                    cvToast.remove();
+                }, 3000);
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
